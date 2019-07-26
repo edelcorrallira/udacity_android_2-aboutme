@@ -2,4 +2,10 @@
     <string name="app_name">About Me</string>
     <string name="name">Eduardo del Corral</string>
     <string name="yellow_star">Yellow star</string>
+    <string name="bio">Hi, my name is Eduardo.\n\n
+        I enjoy playing and listening to Music.\n\n
+        I particularly enjoy Classical, Rock and Blues with a healthy Jazz side dish. Some of my favorite composers include Mozart, Beethoven, Shostakovich and Mosolov.\n\n
+        That said I also have a very soft spot for Jimi Hendrix, Gentle Giant, Judas Priest, Iron Maiden and Guns and Roses. Although Mr Muddy Watters, BB and Albert Kind have also very interesting things to listen to.\n\n
+        One of my favorite concerts was Claude Bolling\'s Duke Ellington Concerto. It held in a small space and I even got to say hi to the musicians when they were taking a break.\n\n</string>
+    <string name="scrolled_image_description">A placeholder image inside a scrollview</string>
 </resources>

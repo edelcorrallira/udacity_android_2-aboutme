@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.appcompat.widget.LinearLayoutCompat
-        xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical"
+        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        xmlns:android="http://schemas.android.com/apk/res/android">
+        android:layout_height="match_parent" android:paddingStart="@dimen/padding" android:paddingEnd="@dimen/padding">
     <androidx.appcompat.widget.AppCompatTextView android:layout_width="match_parent"
                                                  android:layout_height="wrap_content" android:id="@+id/name_text"
                                                  android:text="@string/name"
@@ -14,5 +14,22 @@
             android:layout_height="wrap_content" app:srcCompat="@android:drawable/btn_star_big_on"
             android:id="@+id/star_image" android:contentDescription="@string/yellow_star"
             android:layout_marginTop="@dimen/layout_margin"/>
-
+    <ScrollView android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:id="@+id/bio_scroll">
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" app:srcCompat="@android:drawable/ic_menu_view"
+                    android:id="@+id/scrolled_image" android:contentDescription="@string/scrolled_image_description"/>
+            <TextView
+                    android:text="@string/bio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:id="@+id/bio_text" style="@style/NameStyle"
+                    android:lineSpacingMultiplier="@dimen/line_spacing_multiplier"
+            />
+        </LinearLayout>
+    </ScrollView>
 </androidx.appcompat.widget.LinearLayoutCompat>
