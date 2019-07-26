@@ -26,10 +26,13 @@ class MainActivity : AppCompatActivity() {
     }
     private fun addNickname(view: View) {
         //We no longer need variables, we access via binding object
-        binding.nicknameText.text = binding.nicknameEdit.text
-        binding.nicknameEdit.visibility = View.GONE
-        binding.doneButton.visibility = View.GONE //corresponds to view variable
-        binding.nicknameText.visibility = View.VISIBLE
+        binding.apply{
+            nicknameText.text = nicknameEdit.text
+            invalidateAll() //Invalidate all binding expressions so they get recreated with correct data
+            nicknameEdit.visibility = View.GONE
+            doneButton.visibility = View.GONE //corresponds to view variable
+            nicknameText.visibility = View.VISIBLE
+        }
 
         //Hide Keyboard
         val imm = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
