@@ -14,20 +14,22 @@ import com.example.aboutme.databinding.ActivityMainBinding
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
+    private val myName: MyName = MyName()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         //Instead of finding ViewById Android now creates a binding object
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
+        binding.myName = myName
+        myName.name=resources.getString(R.string.name)
         //We can now access through binding object
         binding.doneButton.setOnClickListener {
             addNickname(it)// The done button, which was passed as an argument
         }
     }
     private fun addNickname(view: View) {
-        //We no longer need variables, we access via binding object
         binding.apply{
-            nicknameText.text = nicknameEdit.text
+            myName?.nickname = nicknameEdit.text.toString() //We now access the bound variable
             invalidateAll() //Invalidate all binding expressions so they get recreated with correct data
             nicknameEdit.visibility = View.GONE
             doneButton.visibility = View.GONE //corresponds to view variable
