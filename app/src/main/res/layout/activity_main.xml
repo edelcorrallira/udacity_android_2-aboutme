@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.appcompat.widget.LinearLayoutCompat
-        android:orientation="vertical"
+        xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         xmlns:android="http://schemas.android.com/apk/res/android">
     <androidx.appcompat.widget.AppCompatTextView android:layout_width="match_parent"
                                                  android:layout_height="wrap_content" android:id="@+id/name_text"
-                                                 android:text="@string/name" android:textSize="@dimen/text_size"
-                                                 android:textColor="#000000" android:textAlignment="center"/>
+                                                 android:text="@string/name"
+                                                 android:textAlignment="center"
+                                                 style="@style/NameStyle"/>
+    <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" app:srcCompat="@android:drawable/btn_star_big_on"
+            android:id="@+id/star_image" android:contentDescription="@string/yellow_star"
+            android:layout_marginTop="@dimen/layout_margin"/>
 
 </androidx.appcompat.widget.LinearLayoutCompat>
